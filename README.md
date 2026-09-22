@@ -1,4 +1,4 @@
-SportyStyle —Documento Explicativo
+SportyStyle Documento Explicativo
 Mini tienda virtual que simula selección de productos,
 autenticación con Auth0 y carrito de compras en Session Storage.
 Estructura
