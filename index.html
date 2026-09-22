@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportyStyle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <header class="topbar">
+    <h1 class="logo">SportyStyle</h1>
+
+    <div class="topbar-actions">
+      <span id="welcomeMsg" class="welcome" hidden></span>
+      <button id="loginBtn">Iniciar sesión</button>
+      <button id="logoutBtn" hidden>Cerrar sesión</button>
+      <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
+    </div>
+  </header>
+
+  
+  <section class="hero">
+    <h1>La mejor ropa deportiva aquí</h1>
+    <p>Equípate para el gimnasio, la calle y el aire libre.</p>
+  </section>
+
+  <main>
+   
+    <section class="catalogo">
+
+      <h2>Camisetas deportivas</h2>
+      <div class="grid" id="grid-camisetas">
+
+        <article class="producto">
+          <img src="imagenes/camiseta_1.jpg" alt="Camiseta básica Negra">
+          <h3>Camiseta Básica Negra</h3>
+          <p>Algodón suave, ideal para el día a día y entrenamientos livianos.</p>
+          <p class="precio">$12.990</p>
+          <button class="agregar-carrito" data-id="cam-01">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="imagenes/camiseta_2.jpg" alt="Camiseta deportiva Blanca">
+          <h3>Camiseta Training Blanca</h3>
+          <p>Tela transpirable para entrenamiento.</p>
+          <p class="precio">$15.990</p>
+          <button class="agregar-carrito" data-id="cam-02">Agregar al carrito</button>
+        </article>
+
+      </div>
+
+      <h2>Pantalones deportivos</h2>
+      <div class="grid" id="grid-pantalones">
+
+        <article class="producto">
+          <img src="imagenes/pantalon_1.jpg" alt="Jogger gris">
+          <h3>Pantalón Training Azul</h3>
+          <p>Pantalón con puños ajustados, cómodo para gimnasio o calle.</p>
+          <p class="precio">$21.990</p>
+          <button class="agregar-carrito" data-id="pan-01">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="imagenes/pantalon_2.jpg" alt="Pantalón deportivo azul">
+          <h3>Jogger Gris Confort</h3>
+          <p>Corte recto, ideal para entrenamientos y uso casual.</p>
+          <p class="precio">$24.990</p>
+          <button class="agregar-carrito" data-id="pan-02">Agregar al carrito</button>
+        </article>
+
+      </div>
+
+      <h2>Accesorios de deporte</h2>
+      <div class="grid" id="grid-accesorios">
+
+        <article class="producto">
+          <img src="imagenes/cinta_para_el_pelo.jpg" alt="Cinta para el pelo deportiva">
+          <h3>Cinta para el Pelo</h3>
+          <p>Absorbe el sudor y mantiene el cabello en su lugar durante el ejercicio.</p>
+          <p class="precio">$4.990</p>
+          <button class="agregar-carrito" data-id="acc-01">Agregar al carrito</button>
+        </article>
+
+        <article class="producto">
+          <img src="imagenes/botella.jpg" alt="Botella deportiva">
+          <h3>Botella Deportiva 750ml</h3>
+          <p>Botella resistente, perfecta para mantenerte hidratado durante el día.</p>
+          <p class="precio">$6.990</p>
+          <button class="agregar-carrito" data-id="acc-02">Agregar al carrito</button>
+        </article>
+
+      </div>
+
+    </section>
+
+   
+    <aside class="carrito">
+      <h2>Tu carrito</h2>
+      <ul id="cartItems"></ul>
+      <p id="cartEmpty">Aún no agregas productos.</p>
+      <p>Total: <strong id="cartTotal">$0</strong></p>
+      <button id="checkoutBtn" disabled>Ir a pagar</button>
+    </aside>
+  </main>
+
+ 
+  <div id="checkoutModal" class="modal" hidden>
+    <form id="checkoutForm">
+      <h2>Datos de envío</h2>
+
+      <label>Nombre completo
+        <input type="text" id="fullName" required>
+      </label>
+
+      <label>Dirección
+        <input type="text" id="address" required>
+      </label>
+
+      <label>Correo electrónico
+        <input type="email" id="email" required>
+      </label>
+
+      <label>Teléfono
+        <input type="tel" id="phone" required>
+      </label>
+
+      <button type="submit">Confirmar compra</button>
+      <button type="button" id="checkoutCancelBtn">Cancelar</button>
+    </form>
+  </div>
+
+ 
+  <div id="confirmationModal" class="modal" hidden>
+    <div>
+      <h2>¡Gracias por tu compra!</h2>
+      <p id="confDetails"></p>
+      <button id="confCloseBtn">Seguir comprando</button>
+    </div>
+  </div>
+
+  
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.1/auth0-spa-js.production.js"></script>
+
+  
+  <script src="cart.js"></script>
+  <script src="auth.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

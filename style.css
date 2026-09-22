@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: #fbfaf7;
+  color: #2b2b2b;
+  line-height: 1.5;
+}
+
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background: #ffffff;
+  border-bottom: 1px solid #e4e4e0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.topbar-actions button {
+  padding: 10px 18px;
+  border: 1px solid #2b2b2b;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.topbar-actions button:hover {
+  background: #2b2b2b;
+  color: #fff;
+}
+
+
+.hero {
+  background: #dceaf2;
+  text-align: center;
+  padding: 60px 24px;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  color: #4a5a63;
+}
+
+/* ---- Catálogo ---- */
+.catalogo {
+  padding: 48px;
+}
+
+.catalogo h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.producto {
+  background: #fff;
+  text-align: center;
+  padding: 20px;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+}
+
+.producto img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #f4f3ef;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.producto h3 {
+  font-size: 1.05rem;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.producto p {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  margin-bottom: 8px;
+}
+
+.precio {
+  font-weight: bold;
+  color: #2b2b2b !important;
+  font-size: 1rem;
+}
+
+.producto button {
+  margin-top: 10px;
+  padding: 10px 16px;
+  border: none;
+  background: #2b2b2b;
+  color: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.producto button:hover {
+  background: #4a5a63;
+}
+
+/* ---- Carrito ---- */
+.carrito {
+  background: #fff;
+  border: 1px solid #e4e4e0;
+  border-radius: 4px;
+  padding: 24px;
+  max-width: 320px;
+  margin: 0 48px 48px;
+}
+
+.carrito h2 {
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.carrito button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #2b2b2b;
+  color: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.carrito button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* ---- Modales ---- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal form, .modal > * {
+  background: #fff;
+  padding: 32px;
+  border-radius: 4px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 14px;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+.modal input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.modal[hidden] {
+  display: none;
+}
