@@ -1,8 +1,8 @@
  SportyStyle Documento Explicativo
 
-Proyecto individual para la actividad sumativa de la Semana 6 (Taller de Plataformas Web,
 
-Unidad 2: Programación segura). Mini tienda virtual que simula selección de productos,
+
+Unidad 2: Programación segura. Mini tienda virtual que simula selección de productos,
 autenticación con Auth0 y carrito de compras en Session Storage.
 
  Estructura del proyecto
@@ -10,8 +10,8 @@ autenticación con Auth0 y carrito de compras en Session Storage.
 sportystyle
  index.html       Estructura de la tienda: catálogo, carrito, formulario de pago, confirmación
  style.css         Estilos visuales
- cart.js             Catálogo de productos y lógica del carrito (Session Storage)
- auth.js               Integración con Auth0 (login, logout, sesión)
+ cart.js             Catálogo de productos y lógica del carrito 
+ auth.js               Integración con Auth0 
 app.js                  Conecta los botones de la página con las funciones de cart.js y auth.js
  imagenes
     camiseta_1.jpg
@@ -24,10 +24,8 @@ app.js                  Conecta los botones de la página con las funciones de c
 
  1. Flujo de autenticación (Auth0)
 
-La aplicación utiliza SDK oficial auth0-spa-js, cargado por CDN en index.html.
-
 initAuth0 crea el cliente de Auth0 con el domain y el clientId de la
-aplicación registrada en el panel de Auth0. También revisa si la URL contiene los parámetros, que indican que Auth0 acaba de redirigir de vuelta tras un login, en ese caso completa el proceso con  handleRedirectCallback.
+aplicación registrada en el panel de Auth0. También revisa si la URL contiene los parámetros que indican que Auth0 acaba de redirigir de vuelta tras un login.
 
 loginWithAuth0 se ejecuta al hacer clic en Iniciar sesión y llama a
   loginWithRedirect, que envía al usuario a la pantalla de login de Auth0.
